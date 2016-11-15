@@ -60,7 +60,7 @@ function rootReducer(state = initialState, action) {
             return updateState;
 
         case DELETE_BLOG:
-            console.log(action.index)
+            // console.log(action.index)
             const blogArr = Object.assign([], state.blogs);
             blogArr.map((blog, index) => {
                 if(blog.id == action.index){

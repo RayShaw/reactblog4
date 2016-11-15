@@ -24,7 +24,7 @@ export default class AddBlog extends Component {
     handleForm(e) {
         e.preventDefault();
         let newBlog = {
-            id: new Date().getTime(),
+            id: new Date().getTime() + '',
             title: this.refs.blogTitle.value.trim(),
             content: this.refs.blogContent.value.trim(),
             timeLong: new Date().getTime(),
