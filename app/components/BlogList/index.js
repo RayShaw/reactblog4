@@ -19,11 +19,7 @@ export default class BlogList extends Component {
       <div className="col-md-8">
         {
           blogs.map((blog, index) =>
-            <OneBlog
-              {...blog}
-              key={index}
-              />
-
+            <OneBlog {...blog} key={index}/>
           )
         }
       </div>
@@ -33,7 +29,7 @@ export default class BlogList extends Component {
 
 BlogList.propTypes = {
   blogs: PropTypes.arrayOf(PropTypes.shape({
-    //id: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     timeLong: PropTypes.number.isRequired,
