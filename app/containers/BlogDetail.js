@@ -48,7 +48,7 @@ class BlogDetail extends Component {
             timeLong: new Date().getTime(),
         }
 
-        console.log(blog);
+        // console.log(blog);
         const dispatch = this.props.dispatch;
         dispatch(updateBlog(blog));
         browserHistory.push('/');

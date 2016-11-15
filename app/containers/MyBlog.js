@@ -27,7 +27,7 @@ class MyBlog extends Component {
 MyBlog.propTypes = {
   formDisplayed: PropTypes.bool.isRequired,
   blogs: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    // id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     timeLong: PropTypes.number.isRequired,
