@@ -22,7 +22,8 @@ const initialState = {
 		// 	"content": "testtest 11122 3343est 11122 334 est 11122 334",
 		// 	"timeLong": 1479178959961
 		// }
-	]
+	],
+	blog:{}
 };
 
 if (!!localStorage.getItem('data')) {

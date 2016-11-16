@@ -6,15 +6,8 @@ import { connect } from 'react-redux';
 
 class BlogDetail extends Component {
     render() {
-        // console.error(this.props.params.blogId)
-        let blogDetail;
 
-        this.props.blogs.map((blog, index) => {
-            if (blog.id == this.props.params.blogId) {
-                blogDetail = blog;
-            }
-
-        });
+        let blogDetail = this.props.blogs.find(blog => blog.id == this.props.params.blogId);
 
         return <div className="col-md-8">
             <h1 className="page-header">Blog Detail</h1>
@@ -78,8 +71,8 @@ class BlogDetail extends Component {
 
 function select(state) {
     return {
-        formDisplayed: state.formDisplayed,
         blogs: state.blogs
+        // blog: state.blog,
     }
 }
 

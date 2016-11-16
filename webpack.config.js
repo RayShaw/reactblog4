@@ -11,7 +11,7 @@ module.exports = {
     // 入口文件输出配置
     output : {
         path : __dirname,
-        filename : 'bundle.js',
+        filename : '/static/bundle.js',
         // publicPath: '/static/'
     },
 
