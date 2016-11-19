@@ -23,7 +23,7 @@ const initialState = {
 		// 	"timeLong": 1479178959961
 		// }
 	],
-	blog:{}
+	// blog:{}
 };
 
 if (!!localStorage.getItem('data')) {

@@ -19,7 +19,6 @@ export default function blogs(state = [], action) {
             return newBlogs;
 
         case UPDATE_BLOG:
-            // console.log(action.blog);
             let updateBlogs = state.map((blog, index) => {
                     if (blog.id == action.blog.id) {
                         return Object.assign({}, blog, {
@@ -33,24 +32,19 @@ export default function blogs(state = [], action) {
                     }
                     return blog;
                 })
-            // console.log(updateState);
             localStorage.setItem('data', JSON.stringify(updateBlogs));
             return updateBlogs;
 
         case DELETE_BLOG:
-            // console.log(action.index)
-            let deleteBlog = Object.assign([], state);
-            deleteBlog.map((blog, index) => {
+            let deleteBlogs = Object.assign([], state);
+            deleteBlogs.map((blog, index) => {
                 if (blog.id == action.index) {
-                    deleteBlog.splice(index, 1);
+                    deleteBlogs.splice(index, 1);
                 }
             });
 
-            localStorage.setItem('data', JSON.stringify(deleteBlog));
-
-            return Object.assign({}, state, {
-                blogs: blogArr
-            });
+            localStorage.setItem('data', JSON.stringify(deleteBlogs));
+            return deleteBlogs;
 
         default:
             return state;
